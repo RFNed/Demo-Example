@@ -1,4 +1,4 @@
-﻿namespace Demo_Example
+﻿namespace Demo_Example.Forms
 {
     partial class Auth
     {
@@ -28,19 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Auth));
+            this.label1 = new System.Windows.Forms.Label();
+            this.butt_login = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.LoginBox = new System.Windows.Forms.TextBox();
+            this.PasswBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Form1
+            // label1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // butt_login
+            // 
+            resources.ApplyResources(this.butt_login, "butt_login");
+            this.butt_login.Name = "butt_login";
+            this.butt_login.UseVisualStyleBackColor = true;
+            this.butt_login.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // LoginBox
+            // 
+            resources.ApplyResources(this.LoginBox, "LoginBox");
+            this.LoginBox.Name = "LoginBox";
+            // 
+            // PasswBox
+            // 
+            resources.ApplyResources(this.PasswBox, "PasswBox");
+            this.PasswBox.Name = "PasswBox";
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // Auth
+            // 
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 464);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PasswBox);
+            this.Controls.Add(this.LoginBox);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.butt_login);
+            this.Controls.Add(this.label1);
+            this.Name = "Auth";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private Label label1;
+        private Button butt_login;
+        private Button button2;
+        private TextBox LoginBox;
+        private TextBox PasswBox;
+        private PictureBox pictureBox1;
     }
 }

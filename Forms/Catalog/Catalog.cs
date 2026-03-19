@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Demo_Example
+namespace Demo_Example.Forms
 {
     public partial class Catalog : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace Demo_Example
+﻿namespace Demo_Example.Forms
 {
     partial class Catalog
     {
