@@ -130,6 +130,8 @@ namespace Demo_Example.Forms
                             priceStr = price.ToString();
                         }
 
+                        priceStr += " руб";
+
                         Label lblPrice = new Label
                         {
                             Text = priceStr,
