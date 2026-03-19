@@ -57,4 +57,271 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>855, 514</value>
+  </data>
+  <data name="&gt;&gt;itemList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;roleName_label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;greet_label.Name" xml:space="preserve">
+    <value>greet_label</value>
+  </data>
+  <data name="&gt;&gt;greet_label.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="rolleName_label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 92</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="greet_label.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;itemList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="greet_label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 47</value>
+  </data>
+  <data name="&gt;&gt;roleName_label.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAMMOAADDDgAAAAAAAAAA
+        AAD///////////////9ubm7/BwcH/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP+fn5/////////////R0dH/AAAA/25ubv/s7Oz/////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////+Pj4/wAAAP+lpaX//v7+/wAAAP/f39//////////////////6enp/8vLy//FxcX/wcHB/8PD
+        w//CwsL/ysrK/+bm5v////////////////////////////////////////////////+dnZ3/Hx8f/ysr
+        K/8pKSn/Kioq/yAgIP9NTU3/+fn5/wMDA/9kZGT/dXV1///////l5eX/TU1N/wAAAP8AAAD/ICAg/x8f
+        H/8fHx//Hx8f/x8fH/8XFxf/AAAA/wAAAP8FBQX/SkpK/7S0tP//////////////////////////////
+        ///n5+f/6+vr/+vr6//r6+v/6urq////////////AAAA/xMTE/+8vLz/HBwc/wAAAP+Dg4P/////////
+        /////////////////////////////////////////////wAAAP9sbGz/FhYW/wAAAP8zMzP/Q0ND/0ND
+        Q/85OTn/Li4u/zExMf8yMjL/MzMz/zc3N/84ODj/MDAw/zg4OP8FBQX/AQEB/wAAAP+np6f/////////
+        //////////////////////////////////////////////////9RUVH/KSkp/////////////////35+
+        fv8AAAD/AAAA/zQ0NP/ExMT/wMDA/7Kysv+tra3/rKys/6ysrP+7u7v/LCws/6qqqv8AAAD/////////
+        ////////////////////////////////////////////////////////VlZW/wAAAP//////////////
+        ///////////////////Nzc3/NDQ0/wAAAP9zc3P///////////////////////////9SUlL/tLS0/4OD
+        g/8DAwP/6Ojo////////////////////////////////////////////paWl/wAAAP8jIyP/////////
+        ////////////////////////////////////////+vr6/1hYWP8AAAD/Xl5e/////////////////1RU
+        VP+srKz//////4mJif8AAAD/AAAA/wAAAP8AAAD/AAAA/woKCv8KCgr/AAAA/wAAAP8kJCT/wcHB////
+        /////////////////////////////////////////////////////////////+bm5v8AAAD/9PT0////
+        ////////BQUF/66urv//////////////////////8fHx/729vf9xcXH/AgIC/wAAAP+IiIj/////////
+        /////////////////////////////////////////////////////////////1dXV/8AAAD/AAAA/3h4
+        eP//////4eHh/wAAAP8BAQH/ubm5////////////////////////////////////////////0NDQ/yAg
+        IP8AAAD/wsLC/56env8rKyv//////////////////////////////////////5mZmf8AAAD/a2tr////
+        //////////////////8pKSn/tLS0/2RkZP+6urr/////////////////////////////////Pz8//4KC
+        gv///////////5qamv8AAAD/AAAA/+Tk5P//////4uLi//////////////////////+Kior/AAAA/9vb
+        2//b29v/xMTE/8vLy//d3d3/8PDw/wAAAP/o6Oj/VFRU/7e3t///////////////////////////////
+        ///Gxsb/DAwM////////////ODg4/7S0tP+Pj4//AAAA/zMzM/8AAAD/////////////////7Ozs/wAA
+        AP8AAAD/AAAA/xsbG/8pKSn/BAQE/wAAAP8FBQX/Wlpa//////9NTU3/tLS0////////////////////
+        /////////////87Ozv8AAAD//////////////////////46Ojv8AAAD/AAAA/7e3t/+jo6P/oKCg////
+        ////////AAAA////////////////////////////FRUV/6Kiov///////////01NTf+vr6//////////
+        ////////////////////////DQ0N/wAAAP8LCwv/cXFx////////////vr6+///////Z2dn/AAAA/wAA
+        AP/4+Pj///////////9WVlb/bGxs//////8AAAD/////////////////AAAA////////////TExM/6ys
+        rP//////////////////////////////////////eHh4/09PT/+oqKj//////////////////////wAA
+        AP+1tbX/IiIi/1NTU/8AAAD///////7+/v8AAAD//////4KCgv8AAAD///////////8+Pj7/pqam////
+        //9UVFT/q6ur/////////////////////////////////29vb/8rKyv/RERE////////////////////
+        /////////////+rq6v8ODg7/AAAA/3p6ev//////3d3d/wAAAP///////////4aGhv8AAAD//////8LC
+        wv8AAAD/p6en/wAAAP/FxcX/////////////////////////////////1tbW/1tbW/8AAAD/AAAA/9/f
+        3///////////////////////srKy/52dnf//////AAAA/xcXF/8AAAD/zs7O//////8AAAD//////4mJ
+        if8AAAD//////5mZmf9HR0f/lZWV//////////////////////////////////////+9vb3/tbW1/wUF
+        Bf//////////////////////////////////////////////////////s7Oz//////+9vb3//////4GB
+        gf8AAAD//////4mJif8AAAD//////////////////////////////////////////////////////4WF
+        hf8ICAj/AAAA/w8PD//n5+f///////////////////////////////////////////+Ojo7//v7+/3t7
+        e/8AAAD//////4WFhf8AAAD//////1JSUv98fHz/////////////////////////////////////////
+        //////////////////8AAAD/19fX//z8/P///////////66urv+UlJT/rq6u/////////////////0pK
+        Sv9qamr//////3V1df8AAAD//////4CAgP8AAAD/5ubm/yUlJf//////////////////////////////
+        //////////////////87Ozv/AAAA/wAAAP+BgYH//Pz8//////8FBQX/AAAA/yQkJP83Nzf/AAAA/x0d
+        Hf/Q0ND//////wAAAP///////////3V1df8AAAD///////////+Dg4P/Tk5O////////////////////
+        ///////////////////////////////////+/v7/AAAA/11dXf/t7e3/29vb/wAAAP/Jycn/AAAA/7Gx
+        sf//////oqKi/wAAAP9AQED/AAAA/////////////////319ff8AAAD/xMTE/wAAAP/39/f/////////
+        /////////////////////////////////////////////+Tk5P8AAAD///////////9CQkL/f39/////
+        ////////AAAA/3p6ev///////////3x8fP+7u7v//////////////////////wAAAP8AAAD/3Nzc////
+        /////////////////////////////////////////////////////////////w0NDf8AAAD/T09P/wAA
+        AP//////////////////////AAAA/5WVlf////////////////////////////////8AAAD/kZGR////
+        /////////////////////////////////////////////////////////////////////////////9bW
+        1v+EhIT/6enp//////////////////////+hoaH/AAAA/7i4uP//////AAAA/wAAAP8zMzP/AAAA/5GR
+        kf//////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////2tra/9WVlb/AAAA/wAAAP+goKD//////wAA
+        AP+VlZX/////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////BwcH/8TExP//////////////
+        //8AAAD/lZWV////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////+Tk5P8AAAD/////////
+        ////////AAAA/5OTk///////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////Jycn/5yc
+        nP///////////wAAAP+Tk5P/////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //9AQED/T09P//////8AAAD/kpKS////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////88PDz/AAAA/6enp///////////////////////////////////////////////
+        ////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>855, 514</value>
+  </data>
+  <data name="picture.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Catalog</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Каталог</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="roleName_label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 92</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;roleName_label.Name" xml:space="preserve">
+    <value>roleName_label</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 94</value>
+  </data>
+  <data name="itemList.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;greet_label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rolleName_label.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="picture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="itemList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 138</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;greet_label.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="roleName_label.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;picture.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;picture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 36</value>
+  </data>
+  <data name="&gt;&gt;roleName_label.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;rolleName_label.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;itemList.Name" xml:space="preserve">
+    <value>itemList</value>
+  </data>
+  <data name="&gt;&gt;picture.Name" xml:space="preserve">
+    <value>picture</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>839, 475</value>
+  </data>
+  <data name="&gt;&gt;rolleName_label.Name" xml:space="preserve">
+    <value>rolleName_label</value>
+  </data>
+  <data name="&gt;&gt;picture.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;itemList.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 138</value>
+  </data>
+  <data name="rolleName_label.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;rolleName_label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>ru</value>
+  </metadata>
 </root>

@@ -58,72 +58,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="butt_login.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 263</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="butt_login.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="butt_login.Text" xml:space="preserve">
-    <value>Войти</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 23</value>
-  </data>
-  <data name="button2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>Войти как гость</value>
-  </data>
-  <data name="LoginBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="LoginBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 178</value>
-  </data>
-  <data name="LoginBox.MaxLength" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="LoginBox.PlaceholderText" xml:space="preserve">
-    <value>Логин</value>
-  </data>
-  <data name="LoginBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 23</value>
-  </data>
-  <data name="LoginBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="LoginBox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="PasswBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 207</value>
-  </data>
-  <data name="PasswBox.MaxLength" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="PasswBox.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="PasswBox.PlaceholderText" xml:space="preserve">
-    <value>Пароль</value>
-  </data>
-  <data name="PasswBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 23</value>
-  </data>
-  <data name="PasswBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="PasswBox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picture.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAA/8dJREFUeF7s
         /Qd4VsX2/g+/32OhpAMh9I6gonjsHTuKVBW7olhQsR/B3gsq2HtDEQsioqKCKGJXUIr0EnoJJXQIpHH+
@@ -2236,11 +2171,46 @@
         RK5CYII=
 </value>
   </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 75</value>
+  <data name="picture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 97</value>
   </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="picture.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="greet_label.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="greet_label.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 24pt, style=Bold</value>
+  </data>
+  <data name="greet_label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 36</value>
+  </data>
+  <data name="greet_label.Text" xml:space="preserve">
+    <value>Добро пожаловать, </value>
+  </data>
+  <data name="roleName_label.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="roleName_label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 92</value>
+  </data>
+  <data name="roleName_label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 15</value>
+  </data>
+  <data name="roleName_label.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="roleName_label.Text" xml:space="preserve">
+    <value>Ваш уровень прав: </value>
+  </data>
+  <data name="itemList.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="itemList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>815, 297</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2317,11 +2287,5 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
-  </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>372, 551</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Авторизация</value>
   </data>
 </root>

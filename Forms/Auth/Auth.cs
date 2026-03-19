@@ -7,7 +7,7 @@ namespace Demo_Example.Forms
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // << -- Авторизация
         {
             if (LoginBox.Text == "" || PasswBox.Text == "")
             {
@@ -25,9 +25,14 @@ namespace Demo_Example.Forms
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // << -- Гость
         {
             MessageBox.Show("Вы вошли как гость!", "Успешно", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information, defaultButton: MessageBoxDefaultButton.Button1);
+
+            Catalog catalog = new Catalog("Гость", 0, "Гость");
+            catalog.Show();
+            this.Hide();
+            
             /* 
             
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
