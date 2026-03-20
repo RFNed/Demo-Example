@@ -4,18 +4,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.IO;
+using System.Text.Json;
 namespace Demo_Example
 {
     internal class DB
     {
-        private static readonly string _server = "localhost";
-        private static readonly string _port = "3306";
-        private static readonly string _username = "root";
-        private static readonly string _password = "";
-        private static readonly string _database = "demo";
 
-        MySqlConnection connection = new($"server={_server};port={_port};username={_username};password={_password};database={_database}");
+        public class MySqlConfig
+        {
+            public string server { get; set; }
+            public int port { get; set; }
+
+            public string username { get; set; }
+
+            public string password { get; set; }
+
+            public string database { get; set; }
+        }
+
+        public class Config
+        {
+            public MySqlConfig config { get; set; }
+        }
+
+        static string LoadConfig()
+        {
+            if (!File.Exists("config.json"))
+            {
+                MessageBox.Show("config.json не найден!");
+                return null;
+            }
+
+            string json = File.ReadAllText("config.json");
+            Config config = JsonSerializer.Deserialize<Config>(json);
+            // System.Diagnostics.Debug.WriteLine($"server={config.config.server};port={config.config.port};user={config.config.username};password={config.config.password};database={config.config.database};");
+            return $"server={config.config.server};port={config.config.port};user={config.config.username};password={config.config.password};database={config.config.database};";
+            
+        }
+
+        MySqlConnection connection = new(LoadConfig());
 
         public void OpenConnection()
         {

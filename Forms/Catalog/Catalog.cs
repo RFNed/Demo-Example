@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 
+
 namespace Demo_Example.Forms
 {
     public partial class Catalog : Form
@@ -17,16 +18,19 @@ namespace Demo_Example.Forms
 
         string connStr = "server=mysql-8.4;user=root;database=demo;port=3306;password=;";
 
-
         public Catalog(string name, int roleID, string roleName)
         {
+            
             InitializeComponent();
             greet_label.Text += name; // Подгрузка ..........
             roleName_label.Text += roleName;
             LoadItems();
 
-
         }
+
+
+
+
 
         private void Catalog_Load(object sender, EventArgs e)
         {
@@ -58,6 +62,7 @@ namespace Demo_Example.Forms
                     */
 
                     itemList.Controls.Clear(); // Обновляем список
+
 
                     while (reader.Read()) // Перебираем каждую строчку из запроса
                     {
@@ -149,9 +154,10 @@ namespace Demo_Example.Forms
                     }
 
                 }
-                catch (Exception ex)
+                catch
                 {
-                    System.Diagnostics.Debug.WriteLine($"oops.. -> {ex}");
+                    MessageBox.Show("Похоже что вы не открыли соединение MySQL, или ошиблись в конфиге...\nПроверьте ваши данные, и соединение и попробуйте ещё раз!", "У-упс...", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error, defaultButton: MessageBoxDefaultButton.Button1);
+                    Environment.Exit(0);
                 }
             }
         }

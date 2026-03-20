@@ -1,0 +1,9 @@
+{
+    "mysql": {
+        "server": "HERE_YOUR_IP",
+        "port": 3306,
+        "user": "HERE_YOUR_USERNAME",
+        "password": "HERE_YOUR_PASSWORD",
+        "database":  "DATABASE_REQUIRED"
+    }
+}
