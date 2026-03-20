@@ -1,3 +1,6 @@
+using MySql.Data.MySqlClient;
+using System.Data;
+
 namespace Demo_Example.Forms
 {
     public partial class Auth : Form
@@ -9,26 +12,35 @@ namespace Demo_Example.Forms
 
         private void button1_Click(object sender, EventArgs e) // << -- Авторизация
         {
-            if (LoginBox.Text == "" || PasswBox.Text == "")
+            DB db = new();
+            DataTable dt = new();
+            MySqlDataAdapter adapter = new();
+
+            MySqlCommand cmd = new("select * from users u where u.login = @login", db.GetConnection());
+            cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = LoginBox.Text;
+
+            adapter.SelectCommand = cmd;
+            adapter.Fill(dt);
+
+            if (dt.Rows.Count > 0 && dt.Rows[0]["passw"].ToString() == PasswBox.Text)
             {
-                MessageBox.Show("Есть какое то пустое значение... =(");
+                MessageBox.Show("Успешная авторизация", "Успешно", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+                DataRow user = dt.Rows[0];
+                string name = user["name"].ToString();
+                int roleId = Convert.ToInt32(user["role_id"].ToString());
+                Catalog catalog = new(name, roleId, "Роль");
+                catalog.Show();
+                this.Hide();
             }
-            else 
-            { 
-            
-            System.Diagnostics.Debug.WriteLine($"{LoginBox.Text} <- Логин\n{PasswBox.Text} <- Пароль") ; // К большому сожалению Console.WriteLine работает коряво в WinForms
-            /* 
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-            Но зато эта длинная команда гарантированно выводит все что угодно в отладочную консоль.
-             
-            */            
+            else {
+                MessageBox.Show("Неверный логин или пароль", "Ошибка авторизации", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
             }
         }
 
         private void button2_Click(object sender, EventArgs e) // << -- Гость
         {
             MessageBox.Show("Вы вошли как гость!", "Успешно", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information, defaultButton: MessageBoxDefaultButton.Button1);
-
+            
             Catalog catalog = new Catalog("Гость", 0, "Гость");
             catalog.Show();
             this.Hide();
