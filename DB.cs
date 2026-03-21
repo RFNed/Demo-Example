@@ -16,7 +16,7 @@ namespace Demo_Example
             public string server { get; set; }
             public int port { get; set; }
 
-            public string username { get; set; }
+            public string user { get; set; }
 
             public string password { get; set; }
 
@@ -25,7 +25,7 @@ namespace Demo_Example
 
         public class Config
         {
-            public MySqlConfig config { get; set; }
+            public MySqlConfig mysql { get; set; }
         }
 
         static string LoadConfig()
@@ -39,7 +39,7 @@ namespace Demo_Example
             string json = File.ReadAllText("config.json");
             Config config = JsonSerializer.Deserialize<Config>(json);
             // System.Diagnostics.Debug.WriteLine($"server={config.config.server};port={config.config.port};user={config.config.username};password={config.config.password};database={config.config.database};");
-            return $"server={config.config.server};port={config.config.port};user={config.config.username};password={config.config.password};database={config.config.database};";
+            return $"server={config.mysql.server};port={config.mysql.port};user={config.mysql.user};password={config.mysql.password};database={config.mysql.database};";
             
         }
 

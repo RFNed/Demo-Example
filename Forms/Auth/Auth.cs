@@ -13,28 +13,27 @@ namespace Demo_Example.Forms
         private void button1_Click(object sender, EventArgs e) // << -- Авторизация
         {
             DB db = new();
-            DataTable dt = new();
-            MySqlDataAdapter adapter = new();
 
-            MySqlCommand cmd = new("select * from users u where u.login = @login", db.GetConnection());
+            db.OpenConnection();
+
+            MySqlCommand cmd = new("select * from users where login = @login and passw = @passw", db.GetConnection());
             cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = LoginBox.Text;
+            cmd.Parameters.Add("@passw", MySqlDbType.VarChar).Value = PasswBox.Text;
+            MySqlDataReader reader = cmd.ExecuteReader();
 
-            adapter.SelectCommand = cmd;
-            adapter.Fill(dt);
-
-            if (dt.Rows.Count > 0 && dt.Rows[0]["passw"].ToString() == PasswBox.Text)
+            if (reader.HasRows)
             {
+                reader.Read();
                 MessageBox.Show("Успешная авторизация", "Успешно", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-                DataRow user = dt.Rows[0];
-                string name = user["name"].ToString();
-                int roleId = Convert.ToInt32(user["role_id"].ToString());
+                string name = reader.GetString("name");
+                int roleId = reader.GetInt16("role_id");
                 Catalog catalog = new(name, roleId, "Роль");
                 catalog.Show();
                 this.Hide();
             }
-            else {
+            else
                 MessageBox.Show("Неверный логин или пароль", "Ошибка авторизации", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
-            }
+            db.CloseConnection();
         }
 
         private void button2_Click(object sender, EventArgs e) // << -- Гость
