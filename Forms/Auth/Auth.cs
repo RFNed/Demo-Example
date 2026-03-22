@@ -9,29 +9,43 @@ namespace Demo_Example.Forms
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e) // << -- Авторизация
+        private void button1_Click(object sender, EventArgs e)
         {
             DB db = new();
-
             db.OpenConnection();
 
-            MySqlCommand cmd = new("select * from users where login = @login and passw = @passw", db.GetConnection());
-            cmd.Parameters.Add("@login", MySqlDbType.VarChar).Value = LoginBox.Text;
-            cmd.Parameters.Add("@passw", MySqlDbType.VarChar).Value = PasswBox.Text;
-            MySqlDataReader reader = cmd.ExecuteReader();
+            MySqlCommand cmd = new MySqlCommand(@"
+                SELECT u.login, u.role_id, r.name AS role_name
+                FROM users u
+                JOIN roles r ON u.role_id = r.id
+                WHERE u.login = @login AND u.passw = @passw
+            ", db.GetConnection());
 
-            if (reader.HasRows)
+            cmd.Parameters.AddWithValue("@login", LoginBox.Text);
+            cmd.Parameters.AddWithValue("@passw", PasswBox.Text);
+
+            using (var reader = cmd.ExecuteReader())
             {
-                reader.Read();
-                MessageBox.Show("Успешная авторизация", "Успешно", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
-                string name = reader.GetString("name");
-                int roleId = reader.GetInt16("role_id");
-                Catalog catalog = new(name, roleId, "Роль");
-                catalog.Show();
-                this.Hide();
+                if (reader.Read())
+                {
+                    MessageBox.Show("Успешная авторизация", "Успешно",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    string name = reader.GetString("login");
+                    int roleId = reader.GetInt32("role_id");
+                    string roleName = reader.GetString("role_name");
+
+                    Catalog catalog = new(name, roleId, roleName);
+                    catalog.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Неверный логин или пароль", "Ошибка",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
-                MessageBox.Show("Неверный логин или пароль", "Ошибка авторизации", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
+
             db.CloseConnection();
         }
 
@@ -39,7 +53,7 @@ namespace Demo_Example.Forms
         {
             MessageBox.Show("Вы вошли как гость!", "Успешно", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information, defaultButton: MessageBoxDefaultButton.Button1);
             
-            Catalog catalog = new Catalog("Гость", 0, "Гость");
+            Catalog catalog = new Catalog("Гость", 4, "Гость");
             catalog.Show();
             this.Hide();
             

@@ -33,6 +33,7 @@
             this.greet_label = new System.Windows.Forms.Label();
             this.roleName_label = new System.Windows.Forms.Label();
             this.itemList = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,10 +59,18 @@
             this.itemList.Name = "itemList";
             this.itemList.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Catalog
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.itemList);
             this.Controls.Add(this.roleName_label);
             this.Controls.Add(this.greet_label);
@@ -82,5 +91,6 @@
         private Label rolleName_label;
         private FlowLayoutPanel itemList;
         private Label roleName_label;
+        private Button button1;
     }
 }
