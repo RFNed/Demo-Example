@@ -68,7 +68,7 @@ namespace Demo_Example.Forms
 
                 while (reader.Read()) // Перебираем каждую строчку из запроса
                 {
-                    string id = reader["id"].ToString();
+                    int id = reader.GetInt32("id");
                     string name = reader.GetString("name");
                     int price = reader.GetInt32("price");
                     int promo = reader.GetInt32("promo");
@@ -151,22 +151,26 @@ namespace Demo_Example.Forms
                     
 
                     card.Controls.Add(lblPrice); // Ну, понятно.
+
+                    
+
                     if (roleId < 3) { 
                         ContextMenuStrip menu = new ContextMenuStrip();
                         ToolStripMenuItem editItem = new ToolStripMenuItem("Редактировать");
                         editItem.Click += (s, e) =>
                         {
-                            MessageBox.Show("Edit");
+                            editForm form = new(id);
+                            form.Show();
                         };
 
                         menu.Items.Add(editItem);
                         
                         if (roleId == 1)
                         {
-                            ToolStripMenuItem deleteItem = new ToolStripMenuItem("Удалить");
+                            ToolStripMenuItem deleteItem = new ToolStripMenuItem("❌ Удалить");
                             deleteItem.Click += (s, e) =>
                             {
-                                MessageBox.Show("Delete");
+                                deleteItems(id);
                             };
                             menu.Items.Add(deleteItem);
                         }
@@ -194,6 +198,28 @@ namespace Demo_Example.Forms
             {
                 MessageBox.Show("Похоже что вы не открыли соединение MySQL, или ошиблись в конфиге...\nПроверьте ваши данные, и соединение и попробуйте ещё раз!", "У-упс...", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error, defaultButton: MessageBoxDefaultButton.Button1);
                 Environment.Exit(0);
+            }
+        }
+
+        private void deleteItems(int itemId)
+        {
+            DB db = new();
+            db.OpenConnection();
+            DialogResult result = MessageBox.Show("Вы уверены?", "Удаление", buttons: MessageBoxButtons.YesNo, icon: MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    MySqlCommand delCommand = new("DELETE FROM tovar WHERE id = @id", db.GetConnection());
+                    delCommand.Parameters.Add("@id", MySqlDbType.Int32).Value = itemId;
+                    delCommand.ExecuteNonQuery();
+                    MessageBox.Show("OK!", "MySQL", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Asterisk);
+                    LoadItems(_roleId);
+                }
+                catch
+                {
+                    MessageBox.Show("Произошла непредвиденная ошибка...", "MySQL", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
+                }
             }
         }
 
