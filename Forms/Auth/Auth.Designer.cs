@@ -29,64 +29,73 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Auth));
-            this.label1 = new System.Windows.Forms.Label();
-            this.butt_login = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.LoginBox = new System.Windows.Forms.TextBox();
-            this.PasswBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            butt_login = new Button();
+            button2 = new Button();
+            LoginBox = new TextBox();
+            PasswBox = new TextBox();
+            pictureBox1 = new PictureBox();
+            leaveButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(label1, "label1");
+            label1.Name = "label1";
             // 
             // butt_login
             // 
-            resources.ApplyResources(this.butt_login, "butt_login");
-            this.butt_login.Name = "butt_login";
-            this.butt_login.UseVisualStyleBackColor = true;
-            this.butt_login.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(butt_login, "butt_login");
+            butt_login.Name = "butt_login";
+            butt_login.UseVisualStyleBackColor = true;
+            butt_login.Click += button1_Click;
             // 
             // button2
             // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            resources.ApplyResources(button2, "button2");
+            button2.Name = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // LoginBox
             // 
-            resources.ApplyResources(this.LoginBox, "LoginBox");
-            this.LoginBox.Name = "LoginBox";
+            resources.ApplyResources(LoginBox, "LoginBox");
+            LoginBox.Name = "LoginBox";
             // 
             // PasswBox
             // 
-            resources.ApplyResources(this.PasswBox, "PasswBox");
-            this.PasswBox.Name = "PasswBox";
+            resources.ApplyResources(PasswBox, "PasswBox");
+            PasswBox.Name = "PasswBox";
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            resources.ApplyResources(pictureBox1, "pictureBox1");
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.TabStop = false;
+            // 
+            // leaveButton
+            // 
+            resources.ApplyResources(leaveButton, "leaveButton");
+            leaveButton.Name = "leaveButton";
+            leaveButton.UseVisualStyleBackColor = true;
+            leaveButton.Click += leaveButton_Click;
             // 
             // Auth
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.PasswBox);
-            this.Controls.Add(this.LoginBox);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.butt_login);
-            this.Controls.Add(this.label1);
-            this.Name = "Auth";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(pictureBox1);
+            Controls.Add(PasswBox);
+            Controls.Add(LoginBox);
+            Controls.Add(button2);
+            Controls.Add(leaveButton);
+            Controls.Add(butt_login);
+            Controls.Add(label1);
+            Name = "Auth";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -98,5 +107,6 @@
         private TextBox LoginBox;
         private TextBox PasswBox;
         private PictureBox pictureBox1;
+        private Button leaveButton;
     }
 }

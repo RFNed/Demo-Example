@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Utilities.Encoders;
 
 
 
@@ -20,14 +21,14 @@ namespace Demo_Example.Forms
 
         public Catalog(string name, int roleID, string roleName)
         {
-            
+
             InitializeComponent();
             _roleId = roleID;
             greet_label.Text += name; // Подгрузка ..........
             roleName_label.Text += roleName;
-            
+
             LoadItems(roleId: _roleId);
-            
+
         }
 
 
@@ -57,11 +58,6 @@ namespace Demo_Example.Forms
                 MySqlCommand cmd = new MySqlCommand("SELECT * FROM `tovar` WHERE 1", db.GetConnection());
                 MySqlDataReader reader = cmd.ExecuteReader();
 
-                /* 
-                    
-                че нибудь сюда интересное напишу.........
-
-                */
 
                 itemList.Controls.Clear(); // Обновляем список
 
@@ -85,7 +81,10 @@ namespace Demo_Example.Forms
                         Cursor = Cursors.Hand
                     };
 
-                        
+                    if (promo > 0)
+                    {
+                        card.BackColor = System.Drawing.Color.LemonChiffon;
+                    }
 
                     PictureBox pic = new PictureBox // Картинка должна прилагаться.
                     {
@@ -96,7 +95,8 @@ namespace Demo_Example.Forms
                         SizeMode = PictureBoxSizeMode.Zoom
                     };
 
-                    if (System.IO.File.Exists($"Resources\\Images\\{photo}")) { 
+                    if (System.IO.File.Exists($"Resources\\Images\\{photo}"))
+                    {
 
                         pic.Image = Image.FromFile($"Resources\\Images\\{photo}");
                     }
@@ -109,11 +109,12 @@ namespace Demo_Example.Forms
 
                     */
 
-                    else { 
+                    else
+                    {
 
                         pic.BackColor = Color.DarkGray;
                     } // -> Если нет картинки, то просто серый фон =)
-                        
+
                     card.Controls.Add(pic); // Учитываем в карточку картинку!
 
                     Label lblName = new Label
@@ -148,13 +149,14 @@ namespace Demo_Example.Forms
                         TextAlign = ContentAlignment.MiddleCenter
                     };
 
-                    
+
 
                     card.Controls.Add(lblPrice); // Ну, понятно.
 
-                    
 
-                    if (roleId < 3) { 
+
+                    if (roleId < 3)
+                    {
                         ContextMenuStrip menu = new ContextMenuStrip();
                         ToolStripMenuItem editItem = new ToolStripMenuItem("Редактировать");
                         editItem.Click += (s, e) =>
@@ -164,7 +166,7 @@ namespace Demo_Example.Forms
                         };
 
                         menu.Items.Add(editItem);
-                        
+
                         if (roleId == 1)
                         {
                             ToolStripMenuItem deleteItem = new ToolStripMenuItem("❌ Удалить");
@@ -177,19 +179,19 @@ namespace Demo_Example.Forms
                         card.ContextMenuStrip = menu;
 
                     }
-                    
-                    
 
 
 
 
-                    
 
 
-                    
+
+
+
+
 
                     itemList.Controls.Add(card); // Добавляем в сам контейнер карточку.
-                        
+
 
                 }
 
@@ -229,6 +231,17 @@ namespace Demo_Example.Forms
             itemList.Visible = false;
             LoadItems(_roleId);
             itemList.Visible = true;
+            this.Cursor = Cursors.Default;
+        }
+        
+
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            this.Hide();
+            Auth authwindow = new();
+            authwindow.Show();
             this.Cursor = Cursors.Default;
         }
     }

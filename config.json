@@ -1,9 +1,9 @@
 {
     "mysql": {
-        "server": "HERE_YOUR_IP",
+        "server": "mysql-8.4",
         "port": 3306,
-        "user": "HERE_YOUR_USERNAME",
-        "password": "HERE_YOUR_PASSWORD",
-        "database":  "DATABASE_REQUIRED"
+        "user": "root",
+        "password": "",
+        "database":  "demo"
     }
 }

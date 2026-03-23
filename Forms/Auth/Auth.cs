@@ -48,7 +48,7 @@ namespace Demo_Example.Forms
 
             db.CloseConnection();
         }
-
+        private void leaveButton_Click(object s, EventArgs e) => Environment.Exit(0);
         private void button2_Click(object sender, EventArgs e) // << -- Гость
         {
             MessageBox.Show("Вы вошли как гость!", "Успешно", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information, defaultButton: MessageBoxDefaultButton.Button1);
