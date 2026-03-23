@@ -70,6 +70,7 @@ namespace Demo_Example.Forms
                     int promo = reader.GetInt32("promo");
                     string description = reader.GetString("description");
                     string photo = reader.GetString("photo");
+                    int quantity = reader.GetInt32("quantity");
                     // Считываем информацию о товаре
 
                     Panel card = new Panel // Создаем новую панель, ну, что то типа Canvas на Tkinter.
@@ -81,9 +82,14 @@ namespace Demo_Example.Forms
                         Cursor = Cursors.Hand
                     };
 
-                    if (promo > 0)
+                    if (promo > 15)
                     {
-                        card.BackColor = System.Drawing.Color.LemonChiffon;
+                        card.BackColor = ColorTranslator.FromHtml("#2E8B57");
+                    }
+
+                    if (quantity == 0)
+                    {
+                        card.BackColor = Color.Cyan;
                     }
 
                     PictureBox pic = new PictureBox // Картинка должна прилагаться.
@@ -128,26 +134,42 @@ namespace Demo_Example.Forms
 
                     card.Controls.Add(lblName); // Учитываем название товара в карточке.
 
-                    string priceStr;
-                    if (promo != 0)
-                    {
-                        priceStr = (price - (price * (promo / 100))).ToString(); // попытка рассчитать скидочку....
-                    }
-                    else
-                    {
-                        priceStr = price.ToString();
-                    }
-
-                    priceStr += " руб";
-
+                    string priceStr = $"{price} руб";
                     Label lblPrice = new Label
                     {
-                        Text = priceStr,
-                        Width = 130,
+                        Text = $"{price} руб",
+                        Width = 65, // половина
                         Top = 170,
                         Left = 10,
-                        TextAlign = ContentAlignment.MiddleCenter
+                        TextAlign = ContentAlignment.MiddleLeft,
+                        Font = new Font("Arial", 10f, FontStyle.Strikeout),
+                        BackColor = Color.Transparent
                     };
+
+
+
+                    if (price > 0)
+                    {
+                        lblPrice.Font = new Font("Arial", 10f, FontStyle.Strikeout);
+                        lblPrice.ForeColor = Color.Red;
+                        lblPrice.TextAlign = ContentAlignment.MiddleLeft;
+                        lblPrice.BackColor = Color.Transparent;
+                        string promoStr;
+                        promoStr = $"{price - (price * promo / 100.0)} руб";
+                        Label lblPricePromo = new Label
+                        {
+                            Text = promoStr,
+                            Width = 65,
+                            Top = 170,
+                            Left = 75,
+                            TextAlign = ContentAlignment.MiddleRight,
+                            Font = new Font("Arial", 10f, FontStyle.Bold),
+                            ForeColor = Color.Black,
+                            BackColor = Color.Transparent
+                        };
+
+                        card.Controls.Add(lblPricePromo);
+                    }
 
 
 
