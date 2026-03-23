@@ -1,9 +1,9 @@
 {
     "mysql": {
-        "server": "mysql-8.4",
+        "server": "here your address",
         "port": 3306,
         "user": "root",
-        "password": "",
-        "database":  "demo"
+        "password": "password",
+        "database":  "database"
     }
 }
